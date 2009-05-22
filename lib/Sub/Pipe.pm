@@ -1,7 +1,7 @@
 package Sub::Pipe;
 use warnings;
 use strict;
-our $VERSION = sprintf "%d.%02d", q$Revision: 0.1 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%02d", q$Revision: 0.2 $ =~ /(\d+)/g;
 use base 'Exporter';
 our @EXPORT = qw/joint/;
 
@@ -73,6 +73,8 @@ Bless the subroutine to this package so that the overloaded C<|> works.
 
 =head1 AUTHOR
 
+FUJIWARA Shunichiro C<< <fujiwara at cpan.org> >>
+
 Dan Kogai, C<< <dankogai at dan.co.jp> >>
 
 =head1 BUGS
@@ -116,7 +118,7 @@ L<http://d.hatena.ne.jp/sfujiwara/20090521/1242921474>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2009 Dan Kogai, all rights reserved.
+Copyright 2009 FUJIWARA Shunichiro, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

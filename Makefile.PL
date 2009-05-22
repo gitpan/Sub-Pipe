@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'Sub::Pipe',
-    AUTHOR              => 'Dan Kogai <dankogai@dan.co.jp>',
+    AUTHOR              => 'FUJIWARA Shunichiro <fujiwara@cpan.org>',
     VERSION_FROM        => 'lib/Sub/Pipe.pm',
     ABSTRACT_FROM       => 'lib/Sub/Pipe.pm',
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
