@@ -7,7 +7,7 @@ use Test::More 'no_plan';    # tests => 1;
 my $encode_entities = joint {
     my $str = shift;
     $str =~ s{([&<>"])}{
-	'&' . { qw/& amp  < lt > gt " quot/ }->{$1} . ';' ;
+        '&' . { qw/& amp  < lt > gt " quot/ }->{$1} . ';' ;
     }msgex;
     $str;
 };
@@ -15,9 +15,9 @@ my $encode_entities = joint {
 sub replace {
     my ($regexp, $replace) = @_;
     joint {
-	my $str = shift;
-	$str =~ s{$regexp}{$replace}g;
-	$str;
+        my $str = shift;
+        $str =~ s{$regexp}{$replace}g;
+        $str;
     }
 }
 

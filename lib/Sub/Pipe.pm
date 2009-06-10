@@ -1,7 +1,7 @@
 package Sub::Pipe;
 use warnings;
 use strict;
-our $VERSION = sprintf "%d.%02d", q$Revision: 0.2 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%02d", q$Revision: 0.3 $ =~ /(\d+)/g;
 use base 'Exporter';
 our @EXPORT = qw/joint/;
 
@@ -11,7 +11,10 @@ sub joint(&) { bless $_[0], __PACKAGE__ };
 
 if ( $0 eq __FILE__ ) {
     local $\ = "\n";
-    my $uri = joint { use URI::Escape; uri_escape_utf8(shift) };
+    my $uri = joint {
+        require URI::Escape;
+        URI::Escape::uri_escape_utf8(shift);
+    };
     my $html = joint {
         my $str = shift;
         $str =~ s{([&<>"])}{
